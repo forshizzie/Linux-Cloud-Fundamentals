@@ -18,3 +18,8 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-di
 Quickstart for Bash in Azure Cloud Shell
 
 https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
+
+
+This is completed --- labelling of a disk et all e.g /dev/sda
+VM Disk types in HDD/Standard and SSD/Premium.
+Screen shots updated for rest of task.
