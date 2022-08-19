@@ -10,6 +10,10 @@
 
 
 
+
+Task 3,4,5,6 completed
+
+
 Notes:
 Quickstart: Create a Linux VM
 
