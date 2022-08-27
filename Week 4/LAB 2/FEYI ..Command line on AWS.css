@@ -1,0 +1,30 @@
+Tag a resource on AWS 
+aws ec2 create-tags --resources vpc-0a92d3ee7f16642e8 --tags Key=Name,Value=LABVPC
+
+aws ec2 create-tags --resources vpc-0b148b1df8877483e --tags Key=LABVPC,Value=LABVPC
+aws ec2 create-subnet --vpc-id vpc-0b148b1df8877483e --cidr-block 10.0.1.0/24
+
+vpc-0b148b1df8877483e oregon
+
+Describe/display subnets on AWS
+aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-0a92d3ee7f16642e8" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
+aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-0b148b1df8877483e" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
+
+
+Run instances
+aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
+
+Create security groups within a specific VPC
+aws ec2 create-security-group --group-name my-sg --description "serverSG" --vpc-id vpc-0a92d3ee7f16642e8
+aws ec2 create-security-group --group-name my-sg --description "serverSG" --vpc-id vpc-0b148b1df8877483e
+
+
+GroupId": "sg-03e50ac642ddac62a
+
+GROUP iD  sg-017e618d3fe532685
+
+
+
+aws ec2 describe-security-groups --group-ids sg-03e50ac642ddac62a
+
+aws ec2 describe-security-groups --group-ids sg-017e618d3fe532685
